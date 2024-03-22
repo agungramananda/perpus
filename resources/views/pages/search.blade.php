@@ -9,8 +9,8 @@
         @csrf
         <div class="grid grid-cols-4 gap-4">
             <div class="flex items-center">
-                <label for="kategori" class="block mb-2 text-sm font-medium">Pilih Kategori</label>
-                <select id="kategori" class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
+                <label for="category" class="block mb-2 text-sm font-medium">Pilih Kategori</label>
+                <select id="category" class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
                     <option selected>-</option>
                     @foreach($categories as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>                            
@@ -18,7 +18,7 @@
                 </select>
             </div>
             <div class="flex items-center">
-                <input type="text" name="judul" placeholder="Cari..." class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
+                <input type="text" name="title" placeholder="Cari..." class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
                 <button type="submit" class="ml-2 px-4 py-2 bg-sky-600 text-white rounded-sm hover:bg-sky-400">Cari</button>
             </div>
         </div>
@@ -26,8 +26,7 @@
 </div>
 </section>
 <section>
-    <div class="mt-50 p-6">
-        <h1 class="text-3xl font-bold mb-2">DAFTAR BUKU</h1>
+    <div class="p-6">
         <div class="flex row-auto flex-col items-center">
             <div class="grid grid-cols-5 gap-5">
                 @foreach ($books as $items)
