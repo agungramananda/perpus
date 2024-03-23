@@ -3,7 +3,7 @@
 @section('title', 'Cari Buku')
 
 @section('content')
-<section class="py-16">
+<section class="mt-16">
 <div class="p-10">
     <form action="{{url('search')}}" method="get">
         @csrf
@@ -14,7 +14,7 @@
     </form>
 </div>
 </section>
-<section>
+<section class="mb-5">
     <div class="p-6">
         <div class="flex row-auto flex-col items-center">
             <div class="grid grid-cols-5 gap-5">
