@@ -22,9 +22,7 @@ class UserController extends Controller
     public function search(Request $request){
         $categories = Category::all();
         if ($request->title) {
-            $books = Book::where('title', 'LIKE', '%' . $request->title . '%')->orWhereHas('categories', function ($q) use ($request) {
-                $q->where('categories.id', $request->categories);
-            })->get();
+            $books = Book::where('title', 'LIKE', '%' . $request->title . '%')->get();
         } else {
             $books = Book::all();
         }

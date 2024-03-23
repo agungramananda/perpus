@@ -7,20 +7,9 @@
 <div class="p-10">
     <form action="{{url('search')}}" method="get">
         @csrf
-        <div class="grid grid-cols-4 gap-4">
-            <div class="flex items-center">
-                <label for="category" class="block mb-2 text-sm font-medium">Pilih Kategori</label>
-                <select id="category" class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
-                    <option selected>-</option>
-                    @foreach($categories as $item)
-                        <option value="{{$item->id}}">{{$item->name}}</option>                            
-                    @endforeach
-                </select>
-            </div>
-            <div class="flex items-center">
-                <input type="text" name="title" placeholder="Cari..." class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
-                <button type="submit" class="ml-2 px-4 py-2 bg-sky-600 text-white rounded-sm hover:bg-sky-400">Cari</button>
-            </div>
+        <div class="flex items-center">
+            <input type="text" name="title" placeholder="Cari..." class="w-full px-4 py-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm">
+            <button type="submit" class="ml-2 px-4 py-2 bg-sky-600 text-white rounded-sm hover:bg-sky-400">Cari</button>            </div>
         </div>
     </form>
 </div>
