@@ -29,7 +29,7 @@ class AuthController extends Controller
         }
         Session::flash('status', 'failed');
         Session::flash('message', 'Username dan Password Salah');
-        return redirect('/login');
+        return redirect()->route('login');
     }
 
     public function logout(Request $request){
